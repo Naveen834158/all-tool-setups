@@ -28,6 +28,6 @@ it will result 3 nodes in ready state
 
 
 TO DELETE THE CLUSTER 
-export KOPS_STATE_STORE=your-bucket-name
+export KOPS_STATE_STORE=s3://naveen2.aws
 kops get cluster 
 kops delete cluster cluster-name --yes
