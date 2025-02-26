@@ -11,12 +11,12 @@ wget https://github.com/kubernetes/kops/releases/download/v1.25.0/kops-linux-amd
 chmod +x kops-linux-amd64 kubectl
 mv kubectl /usr/local/bin/kubectl
 mv kops-linux-amd64 /usr/local/bin/kops
-aws s3api create-bucket --bucket naveen2.aws --region us-east-1
-aws s3api put-bucket-versioning --bucket naveen2.aws --region us-east-1 --versioning-configuration Status=Enabled
-export KOPS_STATE_STORE=s3://naveen2.aws
+aws s3api create-bucket --bucket naveen22.aws --region us-east-1
+aws s3api put-bucket-versioning --bucket naveen22.aws --region us-east-1 --versioning-configuration Status=Enabled
+export KOPS_STATE_STORE=s3://naveen22.aws
 #creating the cluster
-kops create cluster --name naveen3.k8s.local --zones us-east-1a,us-east-1b --master-size t2.medium --master-count 1 --master-volume-size 40 --node-size t2.medium --node-count 2 --node-volume-size 40
-kops update cluster --name naveen3.k8s.local --yes --admin 
+kops create cluster --name naveen32.k8s.local --zones us-east-1a,us-east-1b --master-size t2.medium --master-count 1 --master-volume-size 40 --node-size t2.medium --node-count 2 --node-volume-size 40
+kops update cluster --name naveen32.k8s.local --yes --admin 
 
 
 
