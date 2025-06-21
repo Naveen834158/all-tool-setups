@@ -16,3 +16,16 @@ aws s3api put-bucket-versioning --bucket cloudanddevopsbyraham0073456.k8s.local 
 export KOPS_STATE_STORE=s3://cloudanddevopsbyraham0073456.k8s.local
 kops create cluster --name rahams.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.medium
 kops update cluster --name rahams.k8s.local --yes --admin
+
+
+
+use "sh kops.sh" command to run the script
+wait for 5 mins
+now check the cluster is ready or not : kubectl get no
+it will result 3 nodes in ready state
+
+
+TO DELETE THE CLUSTER 
+export KOPS_STATE_STORE=your-bucket-name
+kops get cluster 
+kops delete cluster cluster-name --yes
