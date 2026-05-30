@@ -15,7 +15,7 @@ systemctl start jenkins.service
 systemctl status jenkins.service
 
 
-
+29-05-2026
 -----------------------------------------------------------------------------------------------------------------------
 # STEP-1: INSTALL GIT
 yum install git -y
